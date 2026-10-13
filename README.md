@@ -1,4 +1,4 @@
 # C-Programming
-This is my first Git Repository.
+This is my Git repository for projects in C.
 <br>
 Author - Aditya C tutorial

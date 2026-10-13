@@ -79,7 +79,7 @@ void fillCandidate(int cNum)
     int num = 0;
     int isValid = 0;
 
-    // FIX: Replaced infinite-risk recursion with a controlled 'while' loop
+    
     while (!isValid) {
         printf("\nAvailable Symbols: \n");
         for (int j = 0; j < 10; j++) {
@@ -92,9 +92,9 @@ void fillCandidate(int cNum)
         // FIX: If user types a character/letter, scanf fails. We must detect it.
         if (scanf("%d", &num) != 1) {
             printf("Invalid input! Please enter a number.\n");
+
+
             
-            // THE CRITICAL FIX: "Flush" out the invalid text blocking the stream buffer.
-            // It reads character by character until the user's Enter key newline is reached.
             while (getchar() != '\n'); 
             continue; // Jump right back to start the prompt over cleanly
         }
